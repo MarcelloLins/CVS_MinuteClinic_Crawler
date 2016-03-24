@@ -314,7 +314,7 @@ namespace CVS_MinuteClinicWaitTimeScraper
             string[] dataPoint = data.Split (';');
 
             // Writing columns
-            for(int i = 1 ; i <= dataPoint.Count() / 2; i ++)
+            for(int i = 1 ; i <= dataPoint.Count() ; i ++)
             {
                 // Translating numbers into an excel range
                 string excelCell = GetExcelColumnName (i) + _currentExcelRow;
