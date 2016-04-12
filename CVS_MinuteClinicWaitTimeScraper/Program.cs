@@ -97,7 +97,7 @@ namespace CVS_MinuteClinicWaitTimeScraper
 
                     foreach (string fLine in File.ReadLines (options["PHARMACIES_LIST_FILE"]))
                     {
-                        logger.Trace ("Processing Pharmacy : " + fLine);
+                        logger.Info ("Processing Pharmacy : " + fLine);
 
                         // Get Request for Pharmacy Page
                         int    retries = 1;

@@ -80,7 +80,7 @@ namespace CSV_MinuteClinicCrawler
                     // Extracting Urls of each of the States
                     foreach (string stateUrl in Parser.ParseStates (homeResponse))
                     {
-                        logger.Trace ("\t=> Processing State : " + stateUrl.Replace ("http://www.cvs.com/minuteclinic/clinics/", "").Split (';')[0]);
+                        logger.Info ("\t=> Processing State : " + stateUrl.Replace ("http://www.cvs.com/minuteclinic/clinics/", "").Split (';')[0]);
 
                         // Executing Request for State Page
                         string statePageResponse = client.Get (stateUrl);
@@ -95,7 +95,7 @@ namespace CSV_MinuteClinicCrawler
                             // Parsing City Urls
                             foreach (string cityUrl in Parser.ParseCities (statePageResponse))
                             {
-                                logger.Trace ("\t\t=> Processing City : " + cityUrl.Split ('/')[6]);
+                                logger.Info ("\t\t=> Processing City : " + cityUrl.Split ('/')[6]);
 
                                 // Executing Request for City Page
                                 string cityPageResponse = client.Get (cityUrl);
@@ -109,7 +109,7 @@ namespace CSV_MinuteClinicCrawler
                                 {
                                     foreach (string pharmacyUrl in Parser.ParsePharmacyUrls (cityPageResponse))
                                     {
-                                        logger.Trace ("\t\t\t=> Processing Pharmacy : " + pharmacyUrl.Split ('/')[7]);
+                                        logger.Info ("\t\t\t=> Processing Pharmacy : " + pharmacyUrl.Split ('/')[7]);
 
                                         fWriter.WriteLine (pharmacyUrl);
                                     }
