@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVS_MinuteClinicWaitTimeScraper", "CVS_MinuteClinicWaitTimeScraper\CVS_MinuteClinicWaitTimeScraper.csproj", "{9FB06830-DA7D-452F-8117-89183E95AC05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSV_MinuteClinicCrawler", "CVS_MinuteClinicCrawler\CSV_MinuteClinicCrawler.csproj", "{F2C8C07A-44B5-4AE5-8D4C-ACA2588A9EF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVS_MinuteClinicCrawler", "CVS_MinuteClinicCrawler\CVS_MinuteClinicCrawler.csproj", "{F2C8C07A-44B5-4AE5-8D4C-ACA2588A9EF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

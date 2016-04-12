@@ -307,7 +307,7 @@ namespace CVS_MinuteClinicWaitTimeScraper
             mainSheet.SetBorderColor ("A1:AS" + (_currentExcelRow - 1), Color.Black);
             mainSheet.AutofitColumns ("A1:AS" + (_currentExcelRow - 1));
         }
-
+        
         private static void WriteRow (String data, Worksheet mainSheet)
         {
             // Spliting each data point into it's own array element
@@ -319,6 +319,7 @@ namespace CVS_MinuteClinicWaitTimeScraper
                 // Translating numbers into an excel range
                 string excelCell = GetExcelColumnName (i) + _currentExcelRow;
 
+                // Writing changes to excel
                 mainSheet.Write (excelCell, dataPoint[i - 1]);
             }
 
